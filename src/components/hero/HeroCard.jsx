@@ -9,7 +9,7 @@ export const HeroCard = ({
     first_appearance,
     characters,
 }) => {
-    const imgPath = `assets/${id}.jpg`;
+    const imgPath = `./assets/${id}.jpg`;
     return (
         <div className="col animate__animated animate__backInLeft" >
             <div className='card'>

@@ -21,7 +21,7 @@ export const Hero = () => {
     const handleReturn =()=>{
         navigate(-1);
     }
-    const imgPath = `/assets/${id}.jpg`;
+    const imgPath = `./assets/${id}.jpg`;
 
     return (
 
