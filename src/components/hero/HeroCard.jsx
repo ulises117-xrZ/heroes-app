@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-
-
+import { heroImg } from '../../helpers/heroImg'
+// import batman from '../../assets/dc-batman.jpg'; from static 
 export const HeroCard = ({
     id,
     superhero,
@@ -9,13 +9,13 @@ export const HeroCard = ({
     first_appearance,
     characters,
 }) => {
-    const imgPath = `./assets/${id}.jpg`;
+    // const imgPath = `./assets/${id}.jpg`; //from assets in public
     return (
         <div className="col animate__animated animate__backInLeft" >
             <div className='card'>
                 <div className="row no-gutters">
                     <div className="col-4">
-                        <img src={imgPath} className='card-img' alt={superhero} />
+                        <img src={heroImg(`./${id}.jpg`)} className='card-img' alt={superhero} />
                     </div>
                     <div className="col-8">
                         <div className="card-body">

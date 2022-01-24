@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom"
+import { heroImg } from "../../helpers/heroImg";
 import { getHeroesById } from '../../selectors/getHeroById';
 export const Hero = () => {
     const { heroeId } = useParams();
@@ -21,15 +22,15 @@ export const Hero = () => {
     const handleReturn =()=>{
         navigate(-1);
     }
-    const imgPath = `./assets/${id}.jpg`;
+    // const imgPath = `/assets/${id}.jpg`; desde assets en public
 
     return (
 
         <div className="row mt-5 animate__animated animate__backInUp">
             <div className="col-4">
-                <img src={imgPath} alt={superhero} className="img-thumbnail" />
+                <img src={heroImg(`./${id}.jpg`)} alt={superhero} className="img-thumbnail" />
             </div>
-            <div className="col-8">
+            <div className="col-sm-8">
             <h3>{hero.superhero}</h3>
             <ul className="list-group list-group">
                 <li className="list-group-item">
